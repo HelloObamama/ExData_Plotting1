@@ -16,12 +16,11 @@ EPData$DateTime = strptime(EPData$DateTime, format = "%d/%m/%Y %H:%M:%S",tz= 'UT
 par(mfrow = c(2,2))
 
 # visualization 1
-hist(EPData$Global_active_power, xlab = 'Global Active Power (killowatts)', col = 'red', 
-     main = 'Global Active Power')
-
+plot(y = EPData$Global_active_power, x = EPData$DateTime, type= 'l', 
+       xlab = 'Date Time', ylab = 'Global Active Power (kilowatts)')
 
 # visualization 2
-plot(y = EPData$Global_active_power, x = EPData$DateTime, type= 'l', 
+plot(y = EPData$Voltage, x = EPData$DateTime, type= 'l', 
      xlab = 'Date Time', ylab = 'Global Active Power (kilowatts)')
 
 # visualization 3 
